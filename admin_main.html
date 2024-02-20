@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <link rel="stylesheet" href="/static/admin_main.css" type="text/css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script type = "text/javascript" 
+         src = "{{ url_for('static', filename = 'main.js') }}" >
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="">Quiz Portal</a>
+        </div>
+
+        <ul class="showmenu">
+            <li><a href="https://www.saec.ac.in/">Home</a></li>
+            <li><a href="https://www.saec.ac.in/about-us/">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="/">Logout <i class='bx bx-log-out'></i></a></li>
+        </ul>
+
+        <div class="menu">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+    </nav>
+
+    <div class="main_btn" id="main_btn"> 
+        <button type="button" class="add_staff_btn" id="staff_add_btn" onclick="displayStaffDetails()">New Staff</button>
+        <button type="button" class="batch_add_btn" id="batch_add_btn" onclick="displayBatchDetails()">New Batch</button>
+        <button type="button" class="add_subject_btn" id="add_subject_btn" onclick="displayAddSub()">Add Subject</button>
+        <button type="button" class="sub_allocation_btn" id="sub_allocation_btn" onclick="displayAllocationForm()">Subject Allocation</button>
+    </div>
+
+    
+        <form id="add_staff_form" style="display: none;">
+            <div class="staff_details" id="staff_details" >
+                <label for="staff_name">Staff Name:</label>
+                <input type="text" id="staff_name" name="staff_name" placeholder="Enter Staff Name" required></br>
+        
+                <label for="staff_email">Staff Email:</label>
+                <input type="email" id="staff_email" name="staff_email" placeholder="Enter Staff Email Id" required><br>
+
+                <label for="staff_pass">Password:</label>
+                <input type="password" id="staff_pass" name="staff_pass" placeholder="Enter Password for Staff" required><br>
+
+                <label for="staff_num">Staff Number:</label>
+                <input type="number" id="staff_num" name="staff_num" placeholder="Enter Staff Phone Number"  required><br>
+
+                <button type="button" class="submit" value="submit" onclick="add_staff()">Submit</button>
+            </div>
+        </form>
+    
+    <form id="batch_add_form">
+        <div class="batch_detials" id="batch_detials" style="display: none;">
+                <label for="batch_number">Batch:</label>
+                <input type="text" id="batch_number" name="batch_number" placeholder="Enter the  batch" required><br>
+
+                <label for="batch_students">No of students:</label>
+                <input type="number" id="batch_students" name="batch_students" placeholder="Enter no of students" required><br>
+
+                <button type="button" id="add_students_btn" class="add_students_btn" onclick="createStudents()">Add Students</button>
+        </div>
+        <div class="add_students" id="add_students">
+            <button type="button"  id="submit_details" class="submit_details" style="display: none;" onclick="addStudents()">Submit</button>
+        </div>
+    </form>
+
+    <form id="add_subjects" style="display: none;">
+        <div class="sub">
+            <label>Subject Name:</label>
+            <input type="text" id="subject_name" name="subject_name" placeholder="Enter the Subject Name" required><br>
+    
+            <label>Subject Code:</label>
+            <input type="text" id="subject_code" name="subject_code" placeholder="Enter the Subject Code" required><br>
+            <label>Select the Sem</label>
+        
+            <select id="Sem_details" class="Sem_details" name="Sem_details">
+                <option value="-1">Select the sem</option>
+                <option value="1">Ist Sem</option>
+                <option value="2">IInd Sem</option>
+                <option value="3">IIIrd Sem</option>
+            </select><br>
+            
+            <button type="button" id="Sem_submit_btn"  class="Sem_submit_btn" onclick="addSub()">Submit</button>
+        </div>
+    </form>
+    
+    <form id="allocation_form" style="display: none;">
+        <div class="alloc">
+            <label>Staff:</label>
+            <select id="Staff_available" class="Staff_available">
+                <option value="-1">Select Staff</option>
+            </select><br>
+        
+            <label>Batch:</label>
+            <select id="batch_available" class="Staff_available">
+                <option value="-1">Select Batch</option>
+            </select><br>
+            <label>Subjects:</label>
+            <select id="available_subjects" class="Staff_available">
+                <option value="-1">Select Subject</option>
+            </select><br>
+            <button type="button" id="allocation_form_submit" class="allocation_form_submit" onclick="subject_allocation()">Submit</button>    
+        </div>
+        
+    </form>
+    <div id="profile_name">
+
+    </div>
+</body>
+</html>
