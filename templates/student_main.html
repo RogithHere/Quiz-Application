@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student_page</title>
+    <link rel="stylesheet" href="/static/student_main.css" type="text/css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script type = "text/javascript" src = "{{ url_for('static', filename = 'main.js') }}"></script>   
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="">Quiz Portal</a>
+        </div>
+
+        <ul class="showmenu">
+            <li><a href="https://www.saec.ac.in/">Home</a></li>
+            <li><a href="https://www.saec.ac.in/about-us/">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="/">Logout <i class='bx bx-log-out'></i></a></li>
+        </ul>
+
+        <div class="menu">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+    </nav>
+
+    <button id="view_assignment_btn" class="view_assignment_btn" onclick="view_assignment()">View Assignment</button>
+    <div id="assesment_details" class="assesment_details">
+
+    </div>
+    <div id="assesment" class="assesment">
+            
+    </div>
+    <button style="display: none" id="submit_answers"  class="submit_answers" onclick="store_result()">Submit</button>
+    <div id="result">
+        
+    </div>
+</body>
+</html>

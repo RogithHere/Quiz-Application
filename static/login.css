@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/resource/deer.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(29, 152, 152);
+
+}
+
+.box h1{
+    text-align: center;
+    font-size: 40px;
+    padding: 10px 0px 20px 0px;
+    color: black;
+}
+
+.box{
+    background-color: cadetblue;
+    border: none;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    width: 400px;
+    height: 420px;
+    color: whitesmoke;
+    border-radius: 20px 6px;
+    box-shadow: 0px 5px 60px rgba(28, 27, 27, 0.9);
+    padding: 30px 40px;
+}
+
+.box .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    border: 3px solid rgba(51, 49, 49, 0.7);
+    font-size: 20px;
+    padding: 20px 45px 20px 15px;
+    color: black;  
+
+}
+input:focus{
+    background-color: whitesmoke;
+}
+input::placeholder{
+    color: rgba(29, 28, 28, 0.7);
+}
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    font-size: 25px;
+    color: black;
+    
+}
+
+.box .btn{ 
+    width: 60%;
+    height: 50px;
+    outline: none;
+    border: none;
+    background-color: whitesmoke;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px rgba(9, 9, 9, 0.978);
+    font-size: 25px;
+    cursor: pointer;
+    color: #333;
+    font-weight: 520;
+    align-items: center;
+    margin-left: 60px;
+    margin-top: 20px;
+    transition: .50s ease-in-out;
+    letter-spacing: 2px;
+} 
+
+.box .btn:hover{
+    background-color: rgb(245, 67, 103);
+}
+    
+.box .reg{
+    font-size: 15px;
+    text-align: center;
+    margin: 20px 0px 15px 0px;
+}
+.reg a{
+    text-decoration: none;
+    color: whitesmoke;
+    /* text-decoration: underline; */
+    font-weight: 600;
+    cursor: grab;
+}
+.reg p a:hover{
+    text-decoration: underline;
+    color: cadetblue;
+    
+}
